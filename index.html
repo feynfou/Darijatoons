@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DarijaToons</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    /* --- Global Styles --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #FFFBF0;
+      line-height: 1.5;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    section {
+      padding: 60px 20px;
+      min-height: 100vh;
+    }
+    h1, h2, p {
+      margin-bottom: 15px;
+    }
+
+    /* --- Navbar --- */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #EDECFF; /* violet */
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      color: #7151A8; /* text violet */
+    }
+    nav .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      font-weight: bold;
+      color: #7151A8;
+      transition: 0.3s;
+    }
+    nav ul li a:hover {
+      opacity: 0.7;
+    }
+
+    /* --- Hero Section --- */
+    #home {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: #C4F9FD; /* blue */
+      color: #2A7EB7; /* text blue */
+    }
+    #home h1 {
+      font-size: 3rem;
+    }
+    #home p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+
+    /* --- Videos Section --- */
+    #videos {
+      background: #EDECFF; /* violet */
+      color: #7151A8; /* text violet */
+    }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    /* --- About Section --- */
+    #about {
+      background: #C4F9FD; /* blue */
+      color: #2A7EB7;
+    }
+
+    /* --- Shop Section --- */
+    #shop {
+      background: #EDECFF; /* violet */
+      color: #7151A8;
+    }
+    .shop-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .shop-item {
+      background: white; /* keep item background white */
+      color: #333; /* text black inside items for readability */
+      padding: 20px;
+      border-radius: 15px;
+      width: 200px;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .shop-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    /* --- Contact Section --- */
+    #contact {
+      background: #C4F9FD; /* blue */
+      color: #2A7EB7;
+      text-align: center;
+    }
+    #contact form {
+      max-width: 400px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    #contact input, #contact textarea {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      width: 100%;
+      color: #333; /* input text black */
+    }
+    #contact button {
+      padding: 10px;
+      background: #EDECFF; /* violet */
+      color: #7151A8;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    #contact button:hover {
+      opacity: 0.8;
+    }
+
+    /* --- Footer --- */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #EDECFF; /* violet */
+      color: #7151A8;
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+      #home h1 {
+        font-size: 2.2rem;
+      }
+      iframe {
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">DarijaToons</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#videos">Videos</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home -->
+  <section id="home">
+    <h1>Welcome to DarijaToons!</h1>
+    <p>Learn Darija while having fun with Kiko and friends. Watch videos, play games, and explore our creative world!</p>
+  </section>
+
+  <!-- Videos -->
+  <section id="videos">
+    <h2>Videos</h2>
+    <div class="video-grid">
+      <iframe src="https://www.youtube.com/embed/ClfjZKBvQC0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/a7AAZC2gDYg" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/IpKHcDps7F0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>DarijaToons is dedicated to teaching North African Darija to toddlers and kids in a fun, playful way. Our mission is to make language learning engaging and memorable.</p>
+  </section>
+
+ <!-- Shop Section -->
+<section id="shop">
+  <h2>Shop</h2>
+  <div class="shop-items">
+    <a href="flashcards.html" class="shop-item">Flashcards</a>
+    <a href="books.html" class="shop-item">Books</a>
+    <a href="toys.html" class="shop-item">Toys</a>
+    <a href="puzzles.html" class="shop-item">Puzzles</a>
+  </div>
+</section>
+
+
+  <!-- Contact -->
+  <!-- <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+
+
+    </form>
+  </section> -->
+
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <div class="kit-form-wrapper">
+    <script async data-uid="6160f1ec70" src="https://darijati.kit.com/6160f1ec70/index.js"></script>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 DarijaToons. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
